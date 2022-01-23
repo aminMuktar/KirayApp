@@ -1,4 +1,4 @@
-#Fri Jan 21 19:57:45 EAT 2022
+#Sun Jan 23 10:39:33 EAT 2022
 base.0=/home/amin/StudioProjects/untitled/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
