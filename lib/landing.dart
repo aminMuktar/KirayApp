@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './widgets/login_widget.dart';
+import './widgets/sign_up.dart';
 import './widgets/slide_indicator_dots.dart';
 import './widgets/slideitem.dart';
 import './slide.dart';
@@ -46,6 +48,7 @@ class _LandingState extends State<Landing> {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(30.0),
+
           child: Column(
             children:<Widget>[
               Expanded(
@@ -53,6 +56,7 @@ class _LandingState extends State<Landing> {
                 child:Stack(
                   alignment: AlignmentDirectional.bottomCenter,
                   children: <Widget>[
+
                     PageView.builder(
                       scrollDirection: Axis.horizontal,
                       controller: _pageController,
@@ -64,7 +68,7 @@ class _LandingState extends State<Landing> {
                       alignment: AlignmentDirectional.topStart,
                       children: <Widget>[
                         Container(
-                          margin: const EdgeInsets.only(bottom: 35),
+                          margin: const EdgeInsets.only(bottom: 50),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -90,15 +94,20 @@ class _LandingState extends State<Landing> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children:<Widget> [
                   TextButton(
-                    onPressed: () { },
-                    child: Text("Signup", style: TextStyle(fontSize: 20,color: Colors.white) ,),
+
+                    onPressed: () {
+                      Navigator.push(
+                          context, 
+                          MaterialPageRoute(builder: (context) => const Signup())
+                      );},
+                    child: Text("Sign Up", style: TextStyle(fontSize: 20,color: Colors.white,) ,),
                     style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(5),
                       ),
                       padding: const EdgeInsets.all(15),
-                      backgroundColor: Colors.indigo[900],
-
+                      backgroundColor: Colors.green,
+                      shadowColor: Colors.green,
                     ),
                     ),
 
@@ -106,8 +115,13 @@ class _LandingState extends State<Landing> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       TextButton(
-                        onPressed: () { },
-                          child: Text("Login", style: TextStyle(fontSize: 20, color: Colors.black) ,),)
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Loginwidget())
+                          );
+                        },
+                          child: Text("Log In", style: TextStyle(fontSize: 20, color: Colors.lightGreen,fontWeight: FontWeight.bold) ,),)
                     ],
                   )
                 ],

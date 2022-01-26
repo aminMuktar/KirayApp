@@ -8,14 +8,14 @@ class SlideIndicatorDots extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
         duration: Duration(
-          milliseconds: 150,
+          milliseconds: 300,
 
         ),
       margin: const EdgeInsets.symmetric(horizontal: 10),
       height: isActive ? 12 : 8,
       width: isActive ? 12 : 8,
       decoration: BoxDecoration(
-        color: isActive ? Theme.of(context).primaryColor : Colors.grey,
+        color: isActive ? Colors.green : Colors.grey,
         borderRadius: BorderRadius.all(
             Radius.circular(30))
       ),

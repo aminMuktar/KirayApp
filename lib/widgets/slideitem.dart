@@ -9,44 +9,48 @@ class SlideItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          width: 200,
-          height: 200,
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                  image:AssetImage('assets/images/ic_launcher.png'),
-                  fit: BoxFit.cover
-              )
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text('Org name',
-          style: TextStyle(
-              fontSize: 30,
-              color: Theme.of(context).primaryColor
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text(
-          slideList[index].description,
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.black,
+    return Container(
 
-          ),
-          textAlign: TextAlign.center,
-        )
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
 
-      ],
+        children: <Widget>[
+          Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    image:AssetImage('assets/images/ic_launcher.png'),
+                    fit: BoxFit.cover
+                )
+            ),
+          ),
+          SizedBox(
+            height: 80,
+          ),
+          Text('Org name',
+            style: TextStyle(
+                fontSize: 30,
+                color: Colors.green
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            slideList[index].description,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.black,
+
+            ),
+            textAlign: TextAlign.center,
+          )
+
+        ],
+      ),
     );
   }
 }
