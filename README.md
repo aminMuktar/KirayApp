@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+# firebase project name
+# email =d.p@gmail.com
+## Ibis-flutter
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
